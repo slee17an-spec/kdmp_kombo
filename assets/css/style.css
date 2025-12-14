@@ -1,3 +1,7 @@
+body {
+    background: yellow !important;
+}
+
 /* ===== COLOR PALETTE ===== */
 :root {
     --white: #FFFFFF;
