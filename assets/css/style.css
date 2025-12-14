@@ -1,402 +1,81 @@
-/* ===== COLOR PALETTE ===== */
+/* =========================================================
+   CSS MASTER FINAL – KOPERASI DESA MERAH PUTIH – DESA KOMBO
+   Mega Premium Super – Satu-satunya stylesheet utama
+   ========================================================= */
+
+/* ===== VARIABEL DASAR & RESET ===== */
 :root {
-    --white: #FFFFFF;
-    --red: #8A0303;
-    --gray: #D9D9D9;
-    --dark: #222222;
+    --red-main: #8a0303;
+    --red-dark: #5a0202;
+    --red-soft: #b32626;
+    --bg-light: #f7f7f9;
+    --bg-dark: #111111;
+    --bg-card: #ffffff;
+    --text-main: #222222;
+    --text-muted: #666666;
+    --white: #ffffff;
+    --radius-card: 14px;
+    --shadow-soft: 0 10px 25px rgba(0,0,0,0.08);
+    --shadow-strong: 0 18px 45px rgba(0,0,0,0.18);
+    --transition-fast: 0.2s ease;
+    --transition-slow: 0.35s ease;
+    --max-width-content: 1200px;
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* ===== GLOBAL ===== */
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', 'Roboto', sans-serif;
-    background: var(--white);
-    color: var(--dark);
+    font-family: var(--font-main);
+    color: var(--text-main);
+    background: #f4f4f6;
     line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
-.header {
-    background: var(--red);
-    color: var(--white);
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+a {
+    color: inherit;
 }
 
-.header .logo {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.nav a {
-    color: var(--white);
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.nav a:hover,
-.nav a.active {
-    text-decoration: underline;
-}
-
-/* ===== HERO ===== */
-.hero {
-    background: linear-gradient(rgba(138,3,3,0.6), rgba(138,3,3,0.6)), url('../img/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 120px 40px;
-    text-align: center;
-    color: var(--white);
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.btn-primary {
-    background: var(--white);
-    color: var(--red);
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    background: var(--gray);
-}
-
-/* ===== PAGE HEADER ===== */
-.page-header {
-    padding: 60px 40px;
-    text-align: center;
-    background: var(--gray);
-}
-
-.page-header h1 {
-    color: var(--red);
-    margin-bottom: 10px;
-}
-
-.page-header p {
-    font-size: 18px;
-}
-
-/* ===== SECTION ===== */
+/* ===== SECTION GENERIC ===== */
 .section {
-    padding: 60px 40px;
+    padding: 70px 20px;
 }
 
-/* ===== PORTAL GERAI ===== */
-.portal {
-    padding: 60px 40px;
+.section h2 {
     text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: var(--text-main);
 }
 
-.portal .subtitle {
-    color: var(--dark);
-    margin-bottom: 40px;
-    font-size: 18px;
-}
+/* =========================================================
+   HEADER SUPER MEGA PREMIUM
+   ========================================================= */
 
-.portal-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.portal-card {
-    background: var(--white);
-    border: 1px solid var(--gray);
-    border-radius: 10px;
-    padding: 30px 20px;
-    text-decoration: none;
-    color: var(--dark);
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.portal-card:hover {
-    border-color: var(--red);
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-
-.portal-card .icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-    display: block;
-    text-align: center;
-}
-
-.portal-card h3 {
-    color: var(--red);
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-/* ===== UNIT USAHA GRID ===== */
-.unit-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    padding: 20px 0;
-}
-
-.unit-card {
-    background: var(--white);
-    border: 1px solid var(--gray);
-    border-radius: 10px;
-    padding: 25px 20px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.unit-card:hover {
-    border-color: var(--red);
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-
-.unit-card .icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.unit-card h3 {
-    color: var(--red);
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.unit-card p {
-    font-size: 14px;
-    color: var(--dark);
-}
-
-/* ===== FOOTER ===== */
-.footer {
-    background: var(--red);
-    color: var(--white);
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav {
-        margin-top: 10px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .btn-primary {
-        font-size: 16px;
-    }
-
-    .portal-grid,
-    .unit-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* ===== DROPDOWN MENU ===== */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px 15px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 200px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 6px;
-    z-index: 10;
-}
-
-.dropdown-content a {
-    color: #222;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f2f2f2;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    text-decoration: underline;
-}
-
-/* ===== DROPDOWN MENU ===== */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px 15px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 220px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 6px;
-    z-index: 10;
-}
-
-.dropdown-content a {
-    color: #222;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f2f2f2;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    text-decoration: underline;
-}
-
-/* ===== HEADER PREMIUM ===== */
 .header {
-    background: #8a0303;
+    background: var(--red-main);
     color: var(--white);
-    padding: 15px 40px;
+    padding: 14px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
 }
 
-.logo {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-/* ===== NAVIGATION ===== */
-.nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav a {
-    color: var(--white);
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.nav a:hover {
-    text-decoration: underline;
-}
-
-/* ===== DROPDOWN ===== */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.dropbtn {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px 0;
-    font-weight: 500;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 220px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    border-radius: 6px;
-    z-index: 10;
-}
-
-.dropdown-content a {
-    color: #222;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f2f2f2;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    text-decoration: underline;
-}
-
+/* Logo dua baris */
 .logo {
     display: flex;
     flex-direction: column;
@@ -404,25 +83,441 @@ body {
 }
 
 .logo-main {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
 }
 
 .logo-sub {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
     opacity: 0.9;
-    margin-top: 2px;
-}
-.logo {
-    text-align: center; /* atau center jika ingin benar-benar tengah */
+    text-transform: uppercase;
 }
 
-/* ===== FOOTER PREMIUM FINAL ===== */
+/* NAVIGATION & DROPDOWN */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    color: var(--white);
+    margin-left: 22px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+}
+
+/* Underline hover animasi */
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #ffd966;
+    transition: width var(--transition-fast);
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 22px;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 8px 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 230px;
+    box-shadow: var(--shadow-soft);
+    border-radius: 10px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #222;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f7;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   HERO SUPER MEGA PREMIUM (BERANDA)
+   ========================================================= */
+
+.hero-super {
+    position: relative;
+    height: 70vh;
+    min-height: 420px;
+    background: linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.7)
+        ),
+        url('../img/hero-koperasi-main.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-super::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.18), transparent 55%);
+    mix-blend-mode: screen;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 700px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+.btn-hero {
+    display: inline-block;
+    background: #ffd966;
+    color: #222;
+    padding: 12px 26px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: var(--shadow-strong);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.35);
+    background: #ffe588;
+}
+
+/* =========================================================
+   VISI MISI
+   ========================================================= */
+
+.visi-misi {
+    background: var(--bg-light);
+}
+
+.visi-misi-grid {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.vm-card {
+    background: var(--white);
+    border-radius: var(--radius-card);
+    padding: 20px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.vm-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-strong);
+}
+
+.vm-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.vm-card h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.vm-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* =========================================================
+   HIGHLIGHT 7 GERAI
+   ========================================================= */
+
+.highlight-gerai {
+    background: #ffffff;
+}
+
+.gerai-grid {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.gerai-card {
+    background: var(--white);
+    border-radius: var(--radius-card);
+    padding: 18px 18px 20px;
+    box-shadow: var(--shadow-soft);
+    text-decoration: none;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border var(--transition-fast);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.gerai-card .icon {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.gerai-card h3 {
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.gerai-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.gerai-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+    border-color: rgba(138,3,3,0.2);
+}
+
+/* =========================================================
+   EKOSISTEM KOPERASI
+   ========================================================= */
+
+.ekosistem {
+    background: var(--bg-light);
+}
+
+.ekosistem-desc {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.ekosistem-grid {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.eko-card {
+    background: var(--white);
+    border-radius: var(--radius-card);
+    padding: 18px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.eko-card .icon {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.eko-card h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.eko-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.eko-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* =========================================================
+   STATISTIK KOPERASI
+   ========================================================= */
+
+.statistik {
+    background: #ffffff;
+}
+
+.stat-grid {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: var(--bg-light);
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+}
+
+.stat-card h3 {
+    font-size: 26px;
+    color: var(--red-main);
+    margin-bottom: 4px;
+    font-weight: 800;
+}
+
+.stat-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* =========================================================
+   TESTIMONI ANGGOTA
+   ========================================================= */
+
+.testimoni {
+    background: var(--bg-light);
+}
+
+.testi-grid {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.testi-card {
+    background: #ffffff;
+    border-radius: var(--radius-card);
+    padding: 18px 20px;
+    box-shadow: var(--shadow-soft);
+    font-size: 14px;
+    color: var(--text-muted);
+    position: relative;
+}
+
+.testi-card::before {
+    content: "“";
+    position: absolute;
+    font-size: 40px;
+    color: rgba(138,3,3,0.18);
+    top: -18px;
+    left: 18px;
+}
+
+.testi-card h4 {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* =========================================================
+   CTA BERGABUNG
+   ========================================================= */
+
+.cta-final {
+    background: linear-gradient(135deg, var(--red-main), var(--red-dark));
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta-final h2 {
+    color: var(--white);
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.cta-final p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    opacity: 0.95;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: #ffd966;
+    color: #222;
+    padding: 12px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: var(--shadow-strong);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(0,0,0,0.35);
+    background: #ffe588;
+}
+
+/* =========================================================
+   FOOTER PREMIUM FINAL
+   ========================================================= */
 
 .footer-premium {
-    background: #111;
+    background: var(--bg-dark);
     color: #eee;
     padding: 60px 40px 20px;
     margin-top: 60px;
@@ -433,7 +528,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 40px;
-    max-width: 1200px;
+    max-width: var(--max-width-content);
     margin: auto;
 }
 
@@ -447,6 +542,7 @@ body {
 .footer-col p {
     line-height: 1.6;
     opacity: 0.9;
+    font-size: 14px;
 }
 
 .footer-col ul {
@@ -461,6 +557,7 @@ body {
 .footer-col ul li a {
     color: #ddd;
     text-decoration: none;
+    font-size: 14px;
     transition: 0.3s;
 }
 
@@ -474,6 +571,146 @@ body {
     padding-top: 30px;
     margin-top: 40px;
     border-top: 1px solid #333;
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.8;
+}
+
+/* =========================================================
+   GENERIC CARD & GRID (untuk halaman lain: tentang, ekosistem, struktur, roadmap, gerai detail)
+   ========================================================= */
+
+.unit-grid {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.unit-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: 18px 18px 20px;
+    box-shadow: var(--shadow-soft);
+    text-align: left;
+}
+
+.unit-card .icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.unit-card h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.unit-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* HERO GENERIK UNTUK HALAMAN DALAM */
+.hero {
+    padding: 70px 20px;
+    color: var(--white);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 15px;
+}
+
+/* =========================================================
+   PORTAL GERAI (INDEX LAMA) – tetap bisa dipakai
+   ========================================================= */
+
+.portal {
+    padding: 70px 20px;
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+.portal h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.portal .subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.portal-card {
+    background: var(--white);
+    border-radius: var(--radius-card);
+    padding: 18px 18px 20px;
+    box-shadow: var(--shadow-soft);
+    text-decoration: none;
+    color: var(--text-main);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.portal-card .icon {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.portal-card h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.portal-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.portal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        row-gap: 6px;
+    }
+
+    .hero-super {
+        height: auto;
+        padding: 80px 20px 70px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .section {
+        padding: 50px 16px;
+    }
 }
