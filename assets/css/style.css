@@ -418,3 +418,62 @@ body {
 .logo {
     text-align: center; /* atau center jika ingin benar-benar tengah */
 }
+
+/* ===== FOOTER PREMIUM FINAL ===== */
+
+.footer-premium {
+    background: #111;
+    color: #eee;
+    padding: 60px 40px 20px;
+    margin-top: 60px;
+    font-family: inherit;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-col p {
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    opacity: 0.8;
+}
