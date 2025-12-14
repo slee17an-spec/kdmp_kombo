@@ -415,3 +415,6 @@ body {
     opacity: 0.9;
     margin-top: 2px;
 }
+.logo {
+    text-align: center; /* atau center jika ingin benar-benar tengah */
+}
