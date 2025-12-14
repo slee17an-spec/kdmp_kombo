@@ -396,3 +396,22 @@ body {
 .dropdown:hover .dropbtn {
     text-decoration: underline;
 }
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-main {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo-sub {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-top: 2px;
+}
