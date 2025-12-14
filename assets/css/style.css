@@ -1,3 +1,107 @@
+/* ===== COLOR PALETTE ===== */
+:root {
+    --white: #FFFFFF;
+    --red: #8A0303;
+    --gray: #D9D9D9;
+    --dark: #222222;
+}
+
+/* ===== GLOBAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: var(--red);
+    color: var(--white);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav a {
+    color: var(--white);
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav a:hover,
+.nav a.active {
+    text-decoration: underline;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(rgba(138,3,3,0.6), rgba(138,3,3,0.6)), url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 40px;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: var(--white);
+    color: var(--red);
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--gray);
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+    padding: 60px 40px;
+    text-align: center;
+    background: var(--gray);
+}
+
+.page-header h1 {
+    color: var(--red);
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 18px;
+}
+
+/* ===== SECTION ===== */
+.section {
+    padding: 60px 40px;
+}
+
 /* ===== PORTAL GERAI ===== */
 .portal {
     padding: 60px 40px;
@@ -12,7 +116,7 @@
 
 .portal-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
@@ -36,159 +140,90 @@
 .portal-card .icon {
     font-size: 40px;
     margin-bottom: 15px;
+    display: block;
+    text-align: center;
 }
 
 .portal-card h3 {
     color: var(--red);
+    font-size: 20px;
     margin-bottom: 10px;
 }
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerai Sembako</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
 
-<body>
+/* ===== UNIT USAHA GRID ===== */
+.unit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
 
-<!-- HEADER -->
-<header class="header">
-    <div class="logo">KOPERASI DESA MERAH PUTIH – DESA KOMBO</div>
-    <nav class="nav">
-        <a href="index.html">Beranda</a>
-        <a href="gerai-pangan.html">Gerai Pangan</a>
-        <a href="gerai-sembako.html" class="active">Sembako</a>
-        <a href="gerai-simpan-pinjam.html">Simpan Pinjam</a>
-        <a href="gerai-klinik.html">Klinik</a>
-        <a href="gerai-apotik.html">Apotik</a>
-        <a href="gerai-cold-storage.html">Cold Storage</a>
-        <a href="gerai-logistik.html">Logistik</a>
-    </nav>
-</header>
+.unit-card {
+    background: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: 0.3s;
+}
 
-<!-- PAGE HEADER -->
-<section class="page-header">
-    <h1>Gerai Sembako</h1>
-    <p>Distribusi kebutuhan pokok anggota dan masyarakat Desa Kombo.</p>
-</section>
+.unit-card:hover {
+    border-color: var(--red);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
 
-<!-- UNIT USAHA -->
-<section class="section">
-    <h2>Unit Usaha</h2>
+.unit-card .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
-    <div class="unit-grid">
+.unit-card h3 {
+    color: var(--red);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
 
-        <div class="unit-card">
-            <div class="icon">🍚</div>
-            <h3>Beras Koperasi</h3>
-            <p>Beras hasil produksi internal dan mitra petani anggota.</p>
-        </div>
+.unit-card p {
+    font-size: 14px;
+    color: var(--dark);
+}
 
-        <div class="unit-card">
-            <div class="icon">🛒</div>
-            <h3>Gula, Minyak & Telur</h3>
-            <p>Kebutuhan pokok harian untuk anggota dan masyarakat.</p>
-        </div>
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--red);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
 
-        <div class="unit-card">
-            <div class="icon">🥫</div>
-            <h3>Produk Pangan Internal</h3>
-            <p>Hasil olahan gerai pangan, peternakan, dan perikanan.</p>
-        </div>
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-        <div class="unit-card">
-            <div class="icon">🎁</div>
-            <h3>Paket Sembako Anggota</h3>
-            <p>Paket hemat untuk anggota koperasi setiap bulan.</p>
-        </div>
+    .nav {
+        margin-top: 10px;
+    }
 
-    </div>
-</section>
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerai Simpan Pinjam</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    .hero h1 {
+        font-size: 36px;
+    }
 
-<body>
+    .hero p {
+        font-size: 16px;
+    }
 
-<!-- HEADER -->
-<header class="header">
-    <div class="logo">KOPERASI DESA MERAH PUTIH – DESA KOMBO</div>
-    <nav class="nav">
-        <a href="index.html">Beranda</a>
-        <a href="gerai-pangan.html">Gerai Pangan</a>
-        <a href="gerai-sembako.html">Sembako</a>
-        <a href="gerai-simpan-pinjam.html" class="active">Simpan Pinjam</a>
-        <a href="gerai-klinik.html">Klinik</a>
-        <a href="gerai-apotik.html">Apotik</a>
-        <a href="gerai-cold-storage.html">Cold Storage</a>
-        <a href="gerai-logistik.html">Logistik</a>
-    </nav>
-</header>
+    .btn-primary {
+        font-size: 16px;
+    }
 
-<!-- PAGE HEADER -->
-<section class="page-header">
-    <h1>Gerai Simpan Pinjam</h1>
-    <p>Pembiayaan usaha anggota dan penguatan modal koperasi.</p>
-</section>
-
-<!-- UNIT USAHA -->
-<section class="section">
-    <h2>Unit Usaha</h2>
-
-    <div class="unit-grid">
-
-        <div class="unit-card">
-            <div class="icon">💳</div>
-            <h3>Simpanan Pokok & Wajib</h3>
-            <p>Dasar kepesertaan anggota koperasi.</p>
-        </div>
-
-        <div class="unit-card">
-            <div class="icon">💵</div>
-            <h3>Simpanan Sukarela</h3>
-            <p>Tabungan fleksibel untuk anggota koperasi.</p>
-        </div>
-
-        <div class="unit-card">
-            <div class="icon">📈</div>
-            <h3>Pembiayaan Usaha Anggota</h3>
-            <p>Modal kerja untuk usaha produktif anggota.</p>
-        </div>
-
-        <div class="unit-card">
-            <div class="icon">🌾</div>
-            <h3>Pembiayaan Musiman</h3>
-            <p>Pembiayaan tanam–panen untuk petani dan peternak.</p>
-        </div>
-
-        <div class="unit-card">
-            <div class="icon">🔄</div>
-            <h3>Dana Bergulir Produktif</h3>
-            <p>Skema dana bergulir untuk penguatan ekonomi desa.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    © 2025 Koperasi Desa Merah Putih Kombo – Abdi Farm Integrated
-</footer>
-
-</body>
-</html>
-
-<!-- FOOTER -->
-<footer class="footer">
-    © 2025 Koperasi Desa Merah Putih Kombo – Abdi Farm Integrated
-</footer>
-
-</body>
-</html>
+    .portal-grid,
+    .unit-grid {
+        grid-template-columns: 1fr;
+    }
+}
