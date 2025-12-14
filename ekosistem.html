@@ -2,20 +2,20 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Ekosistem Usaha Koperasi</title>
+    <title>Ekosistem Usaha – Koperasi Desa Merah Putih</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-<!-- HEADER PREMIUM -->
+<!-- ===== HEADER PREMIUM (pakai CSS Master Final) ===== -->
 <header class="header">
 
     <div class="logo">
-    <span class="logo-main">KOPERASI DESA MERAH PUTIH</span><br>
-    <span class="logo-sub">DESA KOMBO</span>
-</div>
+        <span class="logo-main">KOPERASI DESA MERAH PUTIH</span>
+        <span class="logo-sub">DESA KOMBO</span>
+    </div>
 
     <nav class="nav">
 
@@ -50,114 +50,169 @@
 
 </header>
 
-<!-- HERO -->
-<section class="hero" style="background: linear-gradient(rgba(138,3,3,0.7), rgba(138,3,3,0.7)), url('assets/img/hero-ekosistem.jpg'); background-size: cover; background-position: center;">
+<!-- ===== HERO KHUSUS EKOSISTEM ===== -->
+<section class="hero" style="
+    background:
+      linear-gradient(rgba(138,3,3,0.78), rgba(17,17,17,0.9)),
+      url('assets/img/hero-ekosistem.jpg');
+    background-size: cover;
+    background-position: center;
+">
     <h1>Ekosistem Usaha Koperasi</h1>
-    <p>Integrasi hulu–hilir untuk membangun ekonomi desa yang mandiri dan berkelanjutan.</p>
+    <p>Integrasi hulu–hilir untuk membangun ekonomi Desa Kombo yang tangguh, modern, dan berkelanjutan.</p>
 </section>
 
-<!-- PENJELASAN -->
+<!-- ===== PENJELASAN UTAMA ===== -->
 <section class="section">
-    <h2>Apa Itu Ekosistem Usaha?</h2>
-    <p style="max-width: 800px; margin: auto; text-align: center;">
-        Ekosistem usaha koperasi adalah rangkaian unit usaha yang saling terhubung, mulai dari produksi,
-        pengolahan, penyimpanan, distribusi, hingga layanan masyarakat. Semua unit bekerja secara terpadu
-        untuk meningkatkan nilai tambah dan kesejahteraan anggota.
+    <h2>Apa Itu Ekosistem Usaha Koperasi?</h2>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-muted); font-size: 15px;">
+        Ekosistem usaha koperasi adalah jaringan unit usaha yang saling terhubung dan menguatkan: mulai dari
+        produksi bahan baku, pengolahan, penyimpanan, distribusi, hingga layanan kesehatan dan kebutuhan harian
+        masyarakat. Dengan ekosistem yang terintegrasi, setiap rupiah yang berputar di desa memberikan nilai
+        tambah berlapis bagi anggota dan komunitas.
     </p>
 </section>
 
-<!-- GRID EKOSISTEM -->
-<section class="section" style="background: var(--gray); border-radius: 10px;">
-    <h2>Komponen Ekosistem</h2>
+<!-- ===== KOMPONEN EKOSISTEM (MENGGUNAKAN unit-grid & unit-card) ===== -->
+<section class="section" style="background: var(--bg-light);">
+    <h2>Komponen Utama Ekosistem</h2>
 
     <div class="unit-grid">
 
         <div class="unit-card">
             <div class="icon">🌾</div>
             <h3>Produksi Pangan</h3>
-            <p>Pertanian, peternakan, perikanan, dan pengolahan bahan baku.</p>
+            <p>Pertanian, peternakan, dan perikanan yang menjadi fondasi ketersediaan bahan baku di desa.</p>
         </div>
 
         <div class="unit-card">
-            <div class="icon">🛒</div>
-            <h3>Gerai Sembako</h3>
-            <p>Penyediaan kebutuhan pokok bagi anggota dan masyarakat.</p>
-        </div>
-
-        <div class="unit-card">
-            <div class="icon">💰</div>
-            <h3>Simpan Pinjam</h3>
-            <p>Pembiayaan usaha dan penguatan modal anggota.</p>
+            <div class="icon">🏭</div>
+            <h3>Pengolahan & Nilai Tambah</h3>
+            <p>Unit pengolahan yang mengubah hasil produksi menjadi produk siap jual bernilai lebih tinggi.</p>
         </div>
 
         <div class="unit-card">
             <div class="icon">❄️</div>
             <h3>Cold Storage</h3>
-            <p>Penyimpanan dingin untuk menjaga kualitas hasil produksi.</p>
+            <p>Penyimpanan dingin untuk menjaga kualitas hasil panen, ternak, dan perikanan sebelum dipasarkan.</p>
+        </div>
+
+        <div class="unit-card">
+            <div class="icon">🛒</div>
+            <h3>Gerai Sembako & Ritel</h3>
+            <p>Menyalurkan kebutuhan pokok dan produk koperasi langsung ke anggota dan masyarakat desa.</p>
         </div>
 
         <div class="unit-card">
             <div class="icon">🚚</div>
             <h3>Logistik & Distribusi</h3>
-            <p>Pengiriman barang, manajemen gudang, dan rantai pasok.</p>
+            <p>Pengelolaan transportasi, gudang, dan alur distribusi produk ke pasar dan mitra strategis.</p>
+        </div>
+
+        <div class="unit-card">
+            <div class="icon">💰</div>
+            <h3>Simpan Pinjam</h3>
+            <p>Penguatan permodalan anggota dan pembiayaan usaha produktif di seluruh ekosistem.</p>
         </div>
 
         <div class="unit-card">
             <div class="icon">🏥</div>
             <h3>Klinik & Apotik</h3>
-            <p>Layanan kesehatan dasar dan penyediaan obat bagi masyarakat.</p>
+            <p>Layanan kesehatan dan farmasi yang memastikan kualitas hidup anggota dan keluarga.</p>
         </div>
 
     </div>
 </section>
 
-<!-- ALUR HULU HILIR -->
+<!-- ===== ALUR HULU – HILIR ===== -->
 <section class="section">
     <h2>Alur Hulu ke Hilir</h2>
+
+    <p style="max-width: 780px; margin: 0 auto 30px; text-align: center; color: var(--text-muted); font-size: 15px;">
+        Ekosistem usaha koperasi dirancang sebagai sebuah rantai nilai yang utuh. Setiap tahapan saling terhubung
+        dan memberikan manfaat berlapis: dari petani dan nelayan, hingga gerai ritel dan layanan kesehatan.
+    </p>
 
     <div class="unit-grid">
 
         <div class="unit-card">
             <div class="icon">🌱</div>
             <h3>1. Produksi</h3>
-            <p>Petani, peternak, dan pembudidaya menghasilkan bahan baku.</p>
+            <p>Petani, peternak, dan pembudidaya menghasilkan komoditas utama: pangan, ternak, dan hasil laut.</p>
         </div>
 
         <div class="unit-card">
             <div class="icon">🏭</div>
             <h3>2. Pengolahan</h3>
-            <p>Produk diolah menjadi komoditas bernilai tambah.</p>
+            <p>Komoditas diolah menjadi produk bernilai tambah seperti beras kemasan, olahan ikan, dan lainnya.</p>
         </div>
 
         <div class="unit-card">
             <div class="icon">❄️</div>
             <h3>3. Penyimpanan</h3>
-            <p>Cold storage menjaga kualitas produk sebelum distribusi.</p>
+            <p>Cold storage dan gudang menyimpan produk dengan standar kualitas yang terjaga.</p>
         </div>
 
         <div class="unit-card">
             <div class="icon">🚛</div>
             <h3>4. Distribusi</h3>
-            <p>Produk dikirim ke pasar, gerai, atau mitra koperasi.</p>
+            <p>Produk didistribusikan ke gerai koperasi, pasar lokal, dan jaringan mitra di luar desa.</p>
         </div>
 
         <div class="unit-card">
             <div class="icon">🛍️</div>
             <h3>5. Penjualan</h3>
-            <p>Produk dijual melalui gerai koperasi dan jaringan mitra.</p>
+            <p>Produk dijual melalui gerai sembako, ritel koperasi, dan kanal pemasaran lainnya.</p>
         </div>
 
     </div>
 </section>
 
-<!-- CTA -->
-<section class="section" style="text-align:center;">
-    <h2>Ekosistem yang Terintegrasi</h2>
-    <p>Koperasi Desa Merah Putih membangun sistem usaha yang saling menguatkan.</p>
-    <a href="index.html" class="btn-primary">Kembali ke Beranda</a>
+<!-- ===== NILAI STRATEGIS EKOSISTEM ===== -->
+<section class="section" style="background: #ffffff;">
+    <h2>Nilai Strategis Ekosistem Koperasi</h2>
+
+    <div class="unit-grid">
+
+        <div class="unit-card">
+            <div class="icon">🔄</div>
+            <h3>Perputaran Ekonomi di Desa</h3>
+            <p>Uang berputar di dalam desa, mengurangi kebocoran ekonomi ke luar daerah.</p>
+        </div>
+
+        <div class="unit-card">
+            <div class="icon">📈</div>
+            <h3>Nilai Tambah Berlapis</h3>
+            <p>Satu komoditas bisa memberikan manfaat di banyak titik: produksi, pengolahan, distribusi, dan ritel.</p>
+        </div>
+
+        <div class="unit-card">
+            <div class="icon">👨‍👩‍👧‍👦</div>
+            <h3>Kesejahteraan Anggota</h3>
+            <p>Anggota terlibat sebagai produsen, pekerja, pemilik, sekaligus penerima manfaat.</p>
+        </div>
+
+        <div class="unit-card">
+            <div class="icon">🤝</div>
+            <h3>Kemitraan Berkeadilan</h3>
+            <p>Ekosistem yang kuat membuka peluang kerjasama dengan investor dan mitra strategis yang sehat.</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ===== CTA KEMBALI & JELAJAHI GERAI ===== -->
+<section class="section" style="text-align:center;">
+    <h2>Ekosistem yang Saling Menguatkan</h2>
+    <p style="max-width: 700px; margin: 0 auto 20px; color: var(--text-muted);">
+        Koperasi Desa Merah Putih membangun ekosistem usaha yang terintegrasi. Setiap unit memiliki peran,
+        namun semuanya bergerak dengan satu tujuan: kemandirian ekonomi Desa Kombo.
+    </p>
+    <a href="index.html" class="btn-cta" style="margin-right: 10px;">Kembali ke Beranda</a>
+    <a href="gerai-pangan.html" class="btn-hero">Lihat Gerai Pangan</a>
+</section>
+
+<!-- ===== FOOTER PREMIUM FINAL ===== -->
 <footer class="footer-premium">
 
     <div class="footer-container">
@@ -205,7 +260,7 @@
     </div>
 
     <div class="footer-bottom">
-        © 2025 Koperasi Desa Merah Putih Kombo – Design : Abdi Farm Integrated
+        © 2025 Koperasi Desa Merah Putih Kombo – Design by Abdi Farm Integrated
     </div>
 
 </footer>
